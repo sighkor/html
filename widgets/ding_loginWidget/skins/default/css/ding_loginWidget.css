@@ -1,0 +1,65 @@
+.ding-login-Title
+{
+    padding: 5px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/*ul태그 용*/
+.ding-reset-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*큰 틀*/
+.ding-login-listWidget
+{
+    border: 1px solid #e5e5e5;
+    background-color: #f8fbfb;
+    box-sizing: border-box;
+    overflow-y:auto;
+}
+
+
+.ding-login-image{
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-size: 5px 5px;
+    background-image: url("../img/online-dot.png");
+    bottom: -6px;
+    margin: 0 5px;
+}
+
+/*.ding-login-listWidget > .ding-login-list
+{
+    overflow: auto;
+    overflow-x: hidden;
+}*/
+
+.ding-login-listWidget .ding-login-link
+{
+    text-decoration: none;
+    color: #000000;
+    font-weight: normal;
+}
+
+.ding-login-listWidget .ding-login-content
+{
+    margin: 5px 0;
+    padding: 5px;
+}
+
+
+.ding-login-listWidget .ding-login-link:hover .ding-login-content{
+    background-color: #edf0f0;
+}
+
+.ding-login-listWidget .level_image
+{
+    position: relative;
+    top: 2px;
+    margin-left: 5px;
+}

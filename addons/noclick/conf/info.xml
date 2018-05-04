@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+    <title>우클릭,드래그 방지 애드온</title>
+    <description>
+        우클릭, 드래그를 방지합니다.
+    </description>
+    <version>1.3</version>
+    <date>2013-01-06</date>
+	<link>http://xenon.teamatde.co.kr/</link>
+
+    <author email_address="hyung778@gmail.com" link="http://teamatde.co.kr/">
+        <name>LI-NA</name>
+    </author>
+	
+	<extra_vars>
+		<var name="hard_mode" type="select">
+			<title>모드</title>
+			<options value="y">
+				<title>향상된 방지 모드</title>
+			</options>
+			<options value="very">
+				<title>더 향상된 방지 모드</title>
+			</options>
+			<options value="n">
+				<title>일반 모드</title>
+			</options>
+			<description>더 향상된 방지 모드는 스크립트를 분석하여 수동으로 대처하기 전에는 절대 방지를 해제할 수 있습니다. 단, 모바일 혹은 IE등의 느린 브라우져에서 랙을 유발할 수 있습니다.</description>
+		</var>
+		<var name="mobile" type="select">
+			<title>모바일 이미지 방지</title>
+			<options value="y">
+				<title>사용</title>
+			</options>
+			<options value="n">
+				<title>사용 안함</title>
+			</options>
+			<description>모바일에서 이미지를 누르면 나오는 창을 안뜨게합니다.</description>
+		</var>
+		<var name="mobile_type" type="select">
+			<title>모바일 이미지 방지 타입</title>
+			<options value="all">
+				<title>전체 방지</title>
+			</options>
+			<options value="xe_content">
+				<title>xe_content 방지</title>
+			</options>
+			<description>xe_content는 XE의 게시글, 위젯 페이지 등 입니다.</description>
+		</var>
+		<var name="noscript" type="select">
+			<title>noscript 사용</title>
+			<options value="y">
+				<title>사용</title>
+			</options>
+			<options value="n">
+				<title>미사용</title>
+			</options>
+			<description>noscript는 자바스크립트가 비활성화될시 사이트 전체 내용을 가리는 기능입니다.</description>
+		</var>
+		<var name="css_selete_block" type="select">
+            <title>향상된 드래그 방지</title>
+			<description>CSS3 지원 브라우저에서 절대로 뚫을 수 없습니다.</description>
+		    <options value="n">
+				<title>No</title>
+		    </options>
+		    <options value="y">
+				<title>Yes</title>
+		    </options>
+		</var>
+		<var name="member_use" type="select">
+            <title>회원 우클릭,드래그 방지</title>
+			<description />
+		    <options value="n">
+				<title>Yes</title>
+		    </options>
+		    <options value="y">
+				<title>No</title>
+		    </options>
+		</var>
+        <var name="admin_use" type="select">
+            <title>관리자 우클릭,드래그 방지</title>
+			<description />
+		    <options value="y">
+				<title>No</title>
+		    </options>
+		    <options value="n">
+				<title>Yes</title>
+		    </options>
+		</var>
+		<var name="group" type="text">
+            <title>특정 그룹 우클릭,드래그 허용</title>
+			<description>여러개의 그룹을 입력시 ','(쉽표)로 구분해주세요. 쉽표 주변에는 띄어쓰기를 입력하지 마세요.</description>
+		</var>
+		<var name="id" type="text">
+            <title>특정 아이디 우클릭,드래그 허용</title>
+			<description>여러개의 아이디을 입력시 ','(쉽표)로 구분해주세요. 쉽표 주변에는 띄어쓰기를 입력하지 마세요.</description>
+		</var>
+	</extra_vars>
+</addon>

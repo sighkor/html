@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+    <title xml:lang="ko">확장 카운터 애드온</title>
+    <title xml:lang="jp">拡張カウンターアドオン</title>
+    <title xml:lang="zh-CN">扩展计数器的插</title>
+    <title xml:lang="en">Extended Counter Addon</title>
+    <title xml:lang="vi">Mở rộng Addon Số lượt truy cập</title>
+    <title xml:lang="ge">Erweiterte Zähler Addon</title>
+    <title xml:lang="es">Addon Contador Extended</title>
+    <title xml:lang="ru">Расширенные Счетчик Аддон</title>
+    <title xml:lang="zh-TW">擴展計數器的插件</title>
+    <description xml:lang="ko">
+        XE 기본 카운터의 확장판입니다.
+        이 애드온을 이용하여 접속 정보를 기록합니다.
+        이 애드온이나 XE 기본 카운터 중 하나만 사용해야 정확한 기록을 할 수 있습니다.
+    </description>
+    <description xml:lang="jp">
+        XEデフォルトのカウンタの拡張版です。
+        このアドオンを利用して接続情報を記録します。
+        このアドオンやXEデフォルトのカウンタで1枚だけ使用正確な記録をすることができます。</description>
+    <description xml:lang="zh-CN">
+        这个插件是XE基本计数器插件的扩展版本。
+        这记录访问信息的基础上基本计数器模块内XE。
+        您应该启用此功能或XE基本计数器插件正确的结果。
+    </description>
+    <description xml:lang="en">
+        This addon is the extended version of the XE basic counter addon.
+        This logs access information based on the basic counter module within XE.
+        You should enable this or XE basic counter addon for proper results.
+    </description>
+    <description xml:lang="vi">
+        Addon này là phiên bản mở rộng của XE cơ bản truy cập addon.
+        Này bản ghi thông tin truy cập dựa trên các mô-đun cơ bản truy cập trong XE.
+        Bạn nên kích hoạt này hoặc XE cơ bản truy cập addon cho kết quả đúng.
+    </description>
+    <description xml:lang="ge">
+        Dieses Addon ist die erweiterte Version des XE grundlegenden Zähler addon.
+        Dieser meldet sich Zugang zu Informationen über die grundlegenden Zählermoduls innerhalb XE basiert.
+        Sie sollten diese Option aktivieren oder XE grundlegenden Zähler Addon für korrekte Ergebnisse.
+    </description>
+    <description xml:lang="es">
+        Este complemento es la versión extendida de la XE básica contra addon.
+        Este registra la información de acceso basado en el módulo contador básico dentro XE.
+        Debe habilitar éste o XE básica contra addon para obtener resultados adecuados.    </description>
+    <description xml:lang="ru">
+        Данный аддон является расширенной версией счетчика аддон XE основной.
+        Это входит доступ к информации на основе базовых модуль счетчика в течение XE.
+        Нужно включить, или XE основных счетчика аддон для надлежащего результата.
+    </description>
+    <description xml:lang="zh-TW">
+        這個插件是XE基本計數器插件的擴展版本。
+        這記錄訪問信息的基礎上基本計數器模塊內XE。
+        您應該啟用此功能或XE基本計數器插件正確的結果。
+    </description>
+    <version>1.1.0</version>
+    <date>2015-01-14</date>
+    <author email_address="kndol@kndol.net" link="http://www.kndol.net/">
+        <name xml:lang="ko">큰돌(KnDol)</name>
+        <name xml:lang="vi">KnDol</name>
+        <name xml:lang="jp">KnDol</name>
+        <name xml:lang="zh-CN">KnDol</name>
+        <name xml:lang="en">KnDol</name>
+        <name xml:lang="ge">KnDol</name>
+        <name xml:lang="es">KnDol</name>
+        <name xml:lang="ru">KnDol</name>
+        <name xml:lang="zh-TW">KnDol</name>
+    </author>
+	<extra_vars>
+		<var name="admin" type="select">
+			<title xml:lang="ko">최고관리자</title>
+			<title xml:lang="en">Administrator</title>
+			<title xml:lang="es">Administrador</title>
+			<title xml:lang="fr">Administrateur</title>
+			<title xml:lang="ru">Администратор</title>
+			<title xml:lang="jp">最高管理者</title>
+			<title xml:lang="zn-CN">高层管理者</title>
+			<title xml:lang="zn-TW">高層管理者</title>
+			<title xml:lang="ge">Administrator</title>
+			<title xml:lang="vi">Quản trị viên</title>
+			<description xml:lang="ko">최고관리자도 포함하시겠습니까?</description>
+			<description xml:lang="en">Do you want to include the referer of admin's connection?</description>
+			<description xml:lang="es">¿Desea incluir la referencia de conexión de administrador?</description>
+			<description xml:lang="fr">Voulez-vous d'inclure le référent de connexion administrateur?</description>
+			<description xml:lang="ru">Вы хотите, чтобы включить реферер администратора связь?</description>
+			<description xml:lang="jp">あなたは管理者接続のリファラを含むようにしたいですか？</description>
+			<description xml:lang="zn-CN">你想包括管理连接的引荐？</description>
+			<description xml:lang="zn-TW">你想包括管理連接的引薦？</description>
+			<description xml:lang="ge">Möchten Sie den Referer von admin Verbindung enthalten?</description>
+			<description xml:lang="vi">Bạn có muốn bao gồm các referer kết nối quản trị viên?</description>
+            <options value="no">
+                <title xml:lang="ko">아니요 (포함 안함)</title>
+                <title xml:lang="en">No (Not Include)</title>
+                <title xml:lang="es">No (No Incluido)</title>
+                <title xml:lang="fr">Non (Ne Pas Inclure)</title>
+                <title xml:lang="ru">Нет (не включить)</title>
+                <title xml:lang="jp">いいえ（含む不可）</title>
+                <title xml:lang="zn-CN">否（不包括）</title>
+                <title xml:lang="zn-TW">否（不包括）</title>
+                <title xml:lang="ge">Nein (nicht einschließen)</title>
+                <title xml:lang="vi">Không (Không Bao gồm)</title>
+            </options>
+            <options value="yes">
+                <title xml:lang="ko">예 (포함)</title>
+                <title xml:lang="en">Yes (Include)</title>
+                <title xml:lang="es">Sí (Incluido)</title>
+                <title xml:lang="fr">Oui (Include)</title>
+                <title xml:lang="ru">Да (Включить)</title>
+                <title xml:lang="jp">はい（含む）</title>
+                <title xml:lang="zn-CN">好 （含税）</title>
+                <title xml:lang="zn-TW">好 （含稅）</title>
+                <title xml:lang="ge">Ja (Include)</title>
+                <title xml:lang="vi">Có (Bao gồm)</title>
+            </options>
+		</var>
+		<var name="exclude_bot" type="select">
+			<title xml:lang="ko">알려진 봇의 접근 기록 제외</title>
+			<title xml:lang="en">Exclude access data of known bots</title>
+			<title xml:lang="es">Excluir los datos de acceso de los robots conocidos</title>
+			<title xml:lang="fr">Exclure les données d'accès de robots connus</title>
+			<title xml:lang="ru">Исключить данные известных ботов доступа</title>
+			<title xml:lang="jp">既知のボットのアクセス記録を除く</title>
+			<title xml:lang="zn-CN">排除已知的僵尸程序访问数据</title>
+			<title xml:lang="zn-TW">排除已知的殭屍程序訪問數據</title>
+			<description xml:lang="ko">이 선택은 아래 두 옵션보다 우선합니다.</description>
+			<description xml:lang="en">This selection takes precedence over the following two options.</description>
+			<description xml:lang="es">Esta selección tiene prioridad sobre las siguientes dos opciones.</description>
+			<description xml:lang="fr">Cette sélection a préséance sur les deux options suivantes.</description>
+			<description xml:lang="ru">Этот выбор имеет приоритет над следующими двумя вариантами.</description>
+			<description xml:lang="jp">この選択は、次の二つのオプションよりも優先されます。</description>
+			<description xml:lang="zn-CN">这种选择优先于以下两个选项。</description>
+			<description xml:lang="zn-TW">這種選擇優先於以下兩個選項。</description>
+            <options value="no">
+                <title xml:lang="ko">아니요 (포함)</title>
+                <title xml:lang="en">No (Include)</title>
+                <title xml:lang="es">No (Incluido)</title>
+                <title xml:lang="fr">Non (Include)</title>
+                <title xml:lang="ru">Нет (Включить)</title>
+                <title xml:lang="jp">いいえ（含む）</title>
+                <title xml:lang="zn-CN">否（含税）</title>
+                <title xml:lang="zn-TW">否（含稅）</title>
+			</options>
+            <options value="yes">
+                <title xml:lang="ko">예 (포함 안함)</title>
+                <title xml:lang="en">Yes (Not Include)</title>
+                <title xml:lang="es">Sí (No Incluido)</title>
+                <title xml:lang="fr">Oui (Ne Pas Inclure)</title>
+                <title xml:lang="ru">Да (не включить)</title>
+                <title xml:lang="jp">はい（含む不可）</title>
+                <title xml:lang="zn-CN">好 （不包括）</title>
+                <title xml:lang="zn-TW">好 （不包括）</title>
+            </options>
+		</var>
+		<var name="treat_msie6_bot" type="select">
+			<title xml:lang="ko">MSIE 6을 봇으로 취급</title>
+			<title xml:lang="en">Treat MSIE 6 as a bot</title>
+			<title xml:lang="es">Treat MSIE 6 as a bot</title>
+			<title xml:lang="fr">Treat MSIE 6 as a bot</title>
+			<title xml:lang="ru">Treat MSIE 6 as a bot</title>
+			<title xml:lang="jp">Treat MSIE 6 as a botく</title>
+			<title xml:lang="zn-CN">Treat MSIE 6 as a bot</title>
+			<title xml:lang="zn-TW">Treat MSIE 6 as a bot據</title>
+			<description xml:lang="ko">중국산 봇에서 많이 사용하는 Microsoft Internet Explorer 6.x로 된 UserAgent를 봇으로 취급합니다.</description>
+			<description xml:lang="en">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="es">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="fr">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="ru">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="jp">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="zn-CN">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+			<description xml:lang="zn-TW">Treat a UserAgent with Microsoft Internet Explorer 6.x as a bot.</description>
+            <options value="yes">
+                <title xml:lang="ko">예 (사용)</title>
+                <title xml:lang="en">Yes (Use)</title>
+                <title xml:lang="es">Sí (Uso)</title>
+                <title xml:lang="fr">Oui (Utilisation)</title>
+                <title xml:lang="ru">Да (Использование)</title>
+                <title xml:lang="jp">はい (使用)</title>
+                <title xml:lang="zn-CN">好 (使用)</title>
+                <title xml:lang="zn-TW">好 (使用)</title>
+            </options>
+            <options value="no">
+                <title xml:lang="ko">아니요 (사용 안 함)</title>
+                <title xml:lang="en">No (Do not use)</title>
+                <title xml:lang="es">No (No utilice)</title>
+                <title xml:lang="fr">Non (Ne pas utiliser)</title>
+                <title xml:lang="ru">Нет (Не используйте)</title>
+                <title xml:lang="jp">いいえ (使用しない)</title>
+                <title xml:lang="zn-CN">否 (已禁用)</title>
+                <title xml:lang="zn-TW">否 (已禁用)</title>
+			</options>
+		</var>
+		<var name="treat_moz5_bot" type="select">
+			<title xml:lang="ko">Mozilla/5.0을 봇으로 취급</title>
+			<title xml:lang="en">Treat Mozilla/5.0 as a bot</title>
+			<title xml:lang="es">Treat Mozilla/5.0 as a bot</title>
+			<title xml:lang="fr">Treat Mozilla/5.0 as a bot</title>
+			<title xml:lang="ru">Treat Mozilla/5.0 as a bot</title>
+			<title xml:lang="jp">Treat Mozilla/5.0 as a botく</title>
+			<title xml:lang="zn-CN">Treat Mozilla/5.0 as a bot</title>
+			<title xml:lang="zn-TW">Treat Mozilla/5.0 as a bot據</title>
+			<description xml:lang="ko">다음 봇에서 사용하는 'Mozilla/5.0'로만 된 UserAgent를 봇으로 취급합니다.</description>
+			<description xml:lang="en">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="es">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="fr">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="ru">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="jp">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="zn-CN">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+			<description xml:lang="zn-TW">Treat a UserAgent with 'Mozilla/5.0' only as a bot.</description>
+            <options value="yes">
+                <title xml:lang="ko">예 (사용)</title>
+                <title xml:lang="en">Yes (Use)</title>
+                <title xml:lang="es">Sí (Uso)</title>
+                <title xml:lang="fr">Oui (Utilisation)</title>
+                <title xml:lang="ru">Да (Использование)</title>
+                <title xml:lang="jp">はい (使用)</title>
+                <title xml:lang="zn-CN">好 (使用)</title>
+                <title xml:lang="zn-TW">好 (使用)</title>
+            </options>
+            <options value="no">
+                <title xml:lang="ko">아니요 (사용 안 함)</title>
+                <title xml:lang="en">No (Do not use)</title>
+                <title xml:lang="es">No (No utilice)</title>
+                <title xml:lang="fr">Non (Ne pas utiliser)</title>
+                <title xml:lang="ru">Нет (Не используйте)</title>
+                <title xml:lang="jp">いいえ (使用しない)</title>
+                <title xml:lang="zn-CN">否 (已禁用)</title>
+                <title xml:lang="zn-TW">否 (已禁用)</title>
+			</options>
+		</var>
+		<var name="exclude_uagent" type="text" default="">
+			<title xml:lang="ko">제외할 UserAgent</title>
+			<title xml:lang="en">UserAgent to Exclude</title>
+			<title xml:lang="es">UserAgent para excluir</title>
+			<title xml:lang="fr">UserAgent à exclure</title>
+			<title xml:lang="ru">UserAgent, чтобы исключить</title>
+			<title xml:lang="jp">除外するUserAgent</title>
+			<title xml:lang="zn-CN">要排除的UserAgent</title>
+			<title xml:lang="zn-TW">要排除的UserAgent</title>
+			<title xml:lang="ge">UserAgent Ausschließen</title>
+			<title xml:lang="vi">Tác nhân Người dùng để loại trừ</title>
+			<description xml:lang="ko">이 문자열을 포함하는 UserAgent는 기록에 넣지 않습니다.
+				항목이 여러 개일 경우 각 문자열은 '|'로 구분하세요. (예: bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="en">UserAgents including these strings are not included.
+				Two or more items must be seperated by '|'. (Ex: bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="es">UserAgents incluyendo estas cadenas no están incluidos.
+				Dos o más artículos deben ser separados por '|'. (Por ejemplo: bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="fr">UserAgents dont ces chaînes ne sont pas inclus.
+				Deux ou plusieurs éléments doivent être séparés par '|'. (Ex: bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="ru">UserAgents в том числе эти строки не включаются.
+				Два или более пунктов должны быть разделены символом "|". (Пример: bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="jp">以下の文字列を含むUserAgentは記録には入れません。
+				項目が複数ある場合、各文字列は'|'で区切ってください。 （例： bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="zn-CN">用户代理不穿的记录，其中包含下面的字符串。
+				如果有多个项目，每串由'|'分开！ （例如： bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="zn-TW">用戶代理不穿的記錄，其中包含下面的字符串。
+				如果有多個項目，每串由'|'分開！ （例如： bot|slurp|spider|yeti|daumoa)</description>
+			<description xml:lang="ge">UserAgents einschließlich dieser Strings sind nicht enthalten.
+				'|' Zwei oder mehr Einzelteile müssen durch getrennt werden. (Ex: bot | schlürfen | spider | Yeti | daumoa)</description>
+			<description xml:lang="vi">UserAgents bao gồm những chuỗi này không bao gồm.
+				Hai hoặc nhiều mục phải được phân cách bằng '|'. (Ví dụ: bot | Slurp | nhện | Yeti | daumoa)</description>
+		</var>
+		<var name="exclude_addr" type="text" default="">
+			<title xml:lang="ko">제외할 주소</title>
+			<title xml:lang="en">Addresses to Exclude</title>
+			<title xml:lang="es">Direcciones para excluir</title>
+			<title xml:lang="fr">Adresses à exclure</title>
+			<title xml:lang="ru">Адреса Исключить</title>
+			<title xml:lang="jp">除外するアドレス</title>
+			<title xml:lang="zn-CN">要排除的地址</title>
+			<title xml:lang="zn-TW">要排除的地址</title>
+			<description xml:lang="ko">이 문자열을 포함하는 주소는 기록에 넣지 않습니다.
+				항목이 여러 개일 경우 각 문자열은 '|'로 구분하세요. (예: 123.123.|123.234.123.234)</description>
+			<description xml:lang="en">Addresses including these strings are not included.
+				Two or more items must be seperated by '|'. (Ex: 123.123.|123.234.123.234)</description>
+			<description xml:lang="es">Anfitriones que incluyen estas cadenas no están incluidos.
+				Dos o más artículos deben ser separados por '|'. (Por ejemplo: 123.123.|123.234.123.234)</description>
+			<description xml:lang="fr">Les hôtes y compris ces chaînes ne sont pas inclus.
+				Deux ou plusieurs éléments doivent être séparés par '|'. (Ex: 123.123.|123.234.123.234)</description>
+			<description xml:lang="ru">Посетителей в том числе эти строки не включаются.
+				Два или более пунктов должны быть разделены символом "|". (Пример: 123.123.|123.234.123.234)</description>
+			<description xml:lang="jp">この文字列を含むアドレスは記録には入れません。
+				項目が複数ある場合、各文字列は'|'で区切ってください。 （例： 123.123.|123.234.123.234)</description>
+			<description xml:lang="zn-CN">地址不记录，其中包含的字符串。
+				如果有多个项目，每串由'|'分开！ （例如：  123.123.|123.234.123.234)</description>
+			<description xml:lang="zn-TW">地址不記錄，其中包含的字符串。
+				如果有多個項目，每串由'|'分開！ （例如：  123.123.|123.234.123.234)</description>
+		</var>
+	</extra_vars>
+</addon>

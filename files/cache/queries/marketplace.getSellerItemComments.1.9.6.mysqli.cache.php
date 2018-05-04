@@ -1,0 +1,70 @@
+<?php if(!defined('__XE__')) exit();
+$query = new Query();
+$query->setQueryId("getSellerItemComments");
+$query->setAction("select");
+$query->setPriority("");
+if(isset($args->module_srl)) {
+${'module_srl1_argument'} = new ConditionArgument('module_srl', $args->module_srl, 'equal');
+${'module_srl1_argument'}->createConditionValue();
+if(!${'module_srl1_argument'}->isValid()) return ${'module_srl1_argument'}->getErrorMessage();
+} else
+${'module_srl1_argument'} = NULL;if(${'module_srl1_argument'} !== null) ${'module_srl1_argument'}->setColumnType('number');
+
+${'member_srl2_argument'} = new ConditionArgument('member_srl', $args->member_srl, 'equal');
+${'member_srl2_argument'}->checkNotNull();
+${'member_srl2_argument'}->createConditionValue();
+if(!${'member_srl2_argument'}->isValid()) return ${'member_srl2_argument'}->getErrorMessage();
+if(${'member_srl2_argument'} !== null) ${'member_srl2_argument'}->setColumnType('number');
+
+${'member_srl3_argument'} = new ConditionArgument('member_srl', $args->member_srl, 'notequal');
+${'member_srl3_argument'}->checkNotNull();
+${'member_srl3_argument'}->createConditionValue();
+if(!${'member_srl3_argument'}->isValid()) return ${'member_srl3_argument'}->getErrorMessage();
+if(${'member_srl3_argument'} !== null) ${'member_srl3_argument'}->setColumnType('number');
+
+${'page6_argument'} = new Argument('page', $args->{'page'});
+${'page6_argument'}->ensureDefaultValue('1');
+if(!${'page6_argument'}->isValid()) return ${'page6_argument'}->getErrorMessage();
+
+${'page_count7_argument'} = new Argument('page_count', $args->{'page_count'});
+${'page_count7_argument'}->ensureDefaultValue('10');
+if(!${'page_count7_argument'}->isValid()) return ${'page_count7_argument'}->getErrorMessage();
+
+${'list_count8_argument'} = new Argument('list_count', $args->{'list_count'});
+${'list_count8_argument'}->ensureDefaultValue('20');
+if(!${'list_count8_argument'}->isValid()) return ${'list_count8_argument'}->getErrorMessage();
+
+${'sort_index4_argument'} = new Argument('sort_index', $args->{'sort_index'});
+${'sort_index4_argument'}->ensureDefaultValue('comments.list_order');
+if(!${'sort_index4_argument'}->isValid()) return ${'sort_index4_argument'}->getErrorMessage();
+
+${'order_type5_argument'} = new SortArgument('order_type5', $args->order_type);
+${'order_type5_argument'}->ensureDefaultValue('asc');
+if(!${'order_type5_argument'}->isValid()) return ${'order_type5_argument'}->getErrorMessage();
+
+$query->setColumns(array(
+new SelectExpression('`comments`.*')
+));
+$query->setTables(array(
+new Table('`xe_comments`', '`comments`')
+,new JoinTable('`xe_documents`', '`documents`', "left join", array(
+new ConditionGroup(array(
+new ConditionWithoutArgument('`comments`.`document_srl`','`documents`.`document_srl`',"equal")))
+))
+,new JoinTable('`xe_marketplace_items`', '`items`', "left join", array(
+new ConditionGroup(array(
+new ConditionWithoutArgument('`documents`.`document_srl`','`items`.`document_srl`',"equal")))
+))
+));
+$query->setConditions(array(
+new ConditionGroup(array(
+new ConditionWithArgument('`documents`.`module_srl`',$module_srl1_argument,"equal")
+,new ConditionWithArgument('`documents`.`member_srl`',$member_srl2_argument,"equal", 'and')
+,new ConditionWithArgument('`comments`.`member_srl`',$member_srl3_argument,"notequal", 'and')))
+));
+$query->setGroups(array());
+$query->setOrder(array(
+new OrderByColumn(${'sort_index4_argument'}, $order_type5_argument)
+));
+$query->setLimit(new Limit(${'list_count8_argument'}, ${'page6_argument'}, ${'page_count7_argument'}));
+return $query; ?>

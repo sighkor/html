@@ -1,0 +1,10 @@
+<?php if(!defined("__XE__"))exit;
+echo $__Context->content ?>
+<style type="text/css">
+	body {margin:0;padding:0}
+</style>
+<script type="text/javascript">
+<!--
+	window.resizeTo(800, jQuery(document.body).height()+100);
+//-->
+</script>

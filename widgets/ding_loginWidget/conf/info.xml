@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget version="0.5">
+    <title xml:lang="ko">파도 접속자 출력 위젯</title>
+    <description xml:lang="ko">로그인 사용자를 출력하는 위젯입니다.</description>
+    <version>0.6</version>
+    <date>2015-02-01</date>
+    <author email_address="pro_bi@naver.com" link="https://www.facebook.com/pages/%EB%94%A9-Ding/554701971272023?ref=hl">
+        <name xml:lang="ko">DING</name>
+    </author>
+    <extra_vars>
+        <var id="title_name">
+            <type>text</type>
+            <name xml:lang="ko">위젯 제목</name>
+            <description xml:lang="ko">위젯이 출력될때 제목입니다.</description>
+        </var>
+        <var id="title_height">
+            <type>text</type>
+            <name xml:lang="ko">위젯 제목 높이</name>
+            <description xml:lang="ko">위젯의 제목 높이를 설정합니다.</description>
+        </var>
+        <var id="title_view">
+            <type>select</type>
+            <name xml:lang="ko">위젯 타이틀 출력 여부</name>
+            <options>
+                <value>view</value>
+                <name xml:lang="ko">출력</name>
+            </options>
+            <options>
+                <value>none</value>
+                <name xml:lang="ko">출력 안함</name>
+            </options>
+        </var>
+        <var id="self_view">
+            <type>select</type>
+            <name xml:lang="ko">회원 자신의 출력 여부</name>
+            <options>
+                <value>true</value>
+                <name xml:lang="ko">출력</name>
+            </options>
+            <options>
+                <value>false</value>
+                <name xml:lang="ko">출력 안함</name>
+            </options>
+        </var>
+        <var id="guest_view">
+            <type>select</type>
+            <name xml:lang="ko">비 로그인 일 때 출력 여부</name>
+            <options>
+                <value>true</value>
+                <name xml:lang="ko">출력</name>
+            </options>
+            <options>
+                <value>false</value>
+                <name xml:lang="ko">출력 안함</name>
+            </options>
+        </var>
+        <var id="use_level_icon">
+            <type>select</type>
+            <name xml:lang="ko">회원 레벨 아이콘 사용 여부</name>
+            <description xml:lang="ko">포인트에 따라 출력되는 회원 레벨 아이콘을 사용할지 설정한다.</description>
+            <options>
+                <value>use</value>
+                <name xml:lang="ko">사용</name>
+            </options>
+            <options>
+                <value>none</value>
+                <name xml:lang="ko">사용안함</name>
+            </options>
+        </var>
+        <var id="admin_select">
+            <type>select</type>
+            <name xml:lang="ko">관리자 출력 여부</name>
+            <options>
+                <value>view</value>
+                <name xml:lang="ko">출력</name>
+            </options>
+            <options>
+                <value>none</value>
+                <name xml:lang="ko">출력 안함</name>
+            </options>
+        </var>
+        <var id="use_mid">
+            <type>select</type>
+            <name xml:lang="ko">대상 지정</name>
+            <description xml:lang="ko">대상을 전체로 하면 홈페이지 접속자 모두가 출력되고 Mid 구분으로 하게 되면 접속한 Mid에 같이 접속한 회원만 출력이 됩니다.</description>
+            <options>
+                <value>total</value>
+                <name xml:lang="ko">전체</name>
+            </options>
+            <options>
+                <value>mid</value>
+                <name xml:lang="ko">Mid 구분</name>
+            </options>
+        </var>
+        <var id="set_height">
+            <type>text</type>
+            <name xml:lang="ko">사용자 목록 높이</name>
+            <description xml:lang="ko">사용자의 목록에 높이를 제한합니다. 스크롤바가 생깁니다. 예)300</description>
+        </var>
+    </extra_vars>
+</widget>
